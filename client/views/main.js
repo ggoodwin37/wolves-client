@@ -1,6 +1,7 @@
 var View = require('ampersand-view'),
 	ViewSwitcher = require('ampersand-view-switcher');
-	templates = require('../templates');
+	dom = require('ampersand-dom');
+var templates = require('../templates');
 
 module.exports = View.extend({
 	template: templates.body,
@@ -17,6 +18,17 @@ module.exports = View.extend({
 	},
 	handlePage: function(pageView) {
 		this.pages.set(pageView);
+		this.setActiveNavItem();
+	},
+	setActiveNavItem: function() {
+		var path = window.location.pathname;
+		this.getAll('[role=nav-items] a').forEach(function (aTag) {
+			if (aTag.pathname === path) {
+				dom.addClass(aTag.parentNode, 'active');
+			} else {
+				dom.removeClass(aTag.parentNode, 'active');
+			}
+		});
 	},
 	handleLinkClick: function(event) {
 		var aTag = event.target;
