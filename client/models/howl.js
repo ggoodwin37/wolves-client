@@ -2,6 +2,13 @@ var moment = require('moment');
 var Model = require('ampersand-model');
 
 module.exports = Model.extend({
+	ajaxConfig: function() {
+		return {
+			headers: {
+				'Auth-Token': app.me.accessToken
+			}
+		};
+	},
 	props: {
 		id: 'string',
 		content: 'string',
