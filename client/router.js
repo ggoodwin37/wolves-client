@@ -30,7 +30,7 @@ module.exports = Router.extend({
 			console.log('bad/missing access token');
 			return;
 		}
-		app.me.access_token = accessToken;
+		app.me.accessToken = accessToken;
 		this.redirectTo('/howls');
 	}
 });
