@@ -15,7 +15,7 @@
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<body><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><a href="/" class="navbar-brand">Wolves</a></div><ul role="nav-items" class="nav navbar-nav"><li><a href="/">Home</a></li><li><a href="/howls">Howls</a></li></ul></div></nav><div class="container"><main role="page-container"></main></div></body>';
+        return '<body><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><a href="/" class="navbar-brand">Wolves</a></div><ul role="nav-items" class="nav navbar-nav"><li><a href="/">Home</a></li><li><a href="/howls">Howls</a></li><li><a href="/auth/login">Login</a></li></ul></div></nav><div class="container"><main role="page-container"></main></div></body>';
     };
 
     // includes/howl.jade compiled template
