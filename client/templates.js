@@ -19,15 +19,8 @@
     };
 
     // includes/howl.jade compiled template
-    templatizer["includes"]["howl"] = function tmpl_includes_howl(locals) {
-        var buf = [];
-        var jade_mixins = {};
-        var jade_interp;
-        var locals_for_with = locals || {};
-        (function(model) {
-            buf.push('<div class="well"><p>' + jade.escape(null == (jade_interp = model.content) ? "" : jade_interp) + "</p><p>" + jade.escape(null == (jade_interp = model.createdAt) ? "" : jade_interp) + "</p></div>");
-        })("model" in locals_for_with ? locals_for_with.model : typeof model !== "undefined" ? model : undefined);
-        return buf.join("");
+    templatizer["includes"]["howl"] = function tmpl_includes_howl() {
+        return '<div class="well"><p role="content"></p><p role="createdAt"></p></div>';
     };
 
     // pages/home.jade compiled template
