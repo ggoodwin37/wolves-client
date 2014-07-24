@@ -1,6 +1,14 @@
 var Model = require('ampersand-model');
 
 module.exports = Model.extend({
+	urlRoot: 'http://wolves.technology/wolves/me',
+	ajaxConfig: function() {
+		return {
+			headers: {
+				'Auth-Token': this.accessToken
+			}
+		};
+	},
 	initialize: function() {
 		var self = this;
 		this.accessToken = localStorage.wolvesAccessToken;

@@ -9,12 +9,13 @@ window.app = {
 		var self = this;
 
 		this.me = new Me();
+		this.me.fetch();
 
 		this.howls = new Howls();
 		this.howls.fetch();
 		setInterval(function() {
 			self.howls.fetch();
-		}, 1000);
+		}, 10000);
 
 		this.router = new Router();
 
