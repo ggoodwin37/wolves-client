@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ampersand-model": "^3.0.4",
+    "ampersand-router": "^1.0.2",
+    "ampersand-view": "^6.0.8",
+    "getconfig": "^0.3.0",
     "hapi": "^6.2.1",
     "moonboots_hapi": "^2.4.0"
   }
