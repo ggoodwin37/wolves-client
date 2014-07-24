@@ -10,9 +10,9 @@ module.exports = Router.extend({
 	},
 
 	home: function() {
-		console.log('home');
+		this.trigger('page', new HomePage());
 	},
 	howls: function() {
-		console.log('howls');
+		this.trigger('page', new HowlsPage());
 	}
 });
