@@ -8,6 +8,6 @@ module.exports = View.extend({
 			type: 'text',
 			role: 'content'
 		},
-		'model.createdAt': '[role=createdAt]'  // same as previous
+		'model.humanCreatedAt': '[role=humanCreatedAt]'  // same as previous
 	}
 });
