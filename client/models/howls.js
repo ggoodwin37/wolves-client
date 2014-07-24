@@ -5,6 +5,6 @@ module.exports = Collection.extend({
 	model: Howl,
 	url: 'http://wolves.technology/howls',
 	comparator: function(model) {
-		return -1 * model.createdAt.valueOf;
+		return -1 * model.createdAt.valueOf();
 	}
 });

@@ -9,6 +9,9 @@ window.app = {
 
 		this.howls = new Howls();
 		this.howls.fetch();
+		setInterval(function() {
+			self.howls.fetch();
+		}, 1000);
 
 		this.router = new Router();
 
