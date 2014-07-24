@@ -1,8 +1,9 @@
 var View = require('ampersand-view'),
 	ViewSwitcher = require('ampersand-view-switcher');
+	templates = require('../templates');
 
 module.exports = View.extend({
-	template: '<body><h2>This be the main view title</h2><main role="page-container"></main></body>',
+	template: templates.body,
 	autoRender: true,
 	initialize: function() {
 		this.listenTo(app.router, 'page', this.handlePage);
