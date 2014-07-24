@@ -1,7 +1,14 @@
+var domready = require('domready');
+var MainView = require('./views/main');
+
 window.app = {
 	init: function() {
-		document.write('yo');
-		//console.log('hello');
+		var self = this;
+		domready(function() {
+			self.view = new MainView({
+				el: document.body
+			});
+		});
 	}
 };
 
