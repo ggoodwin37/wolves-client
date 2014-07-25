@@ -3,13 +3,10 @@ var MainView = require('./views/main');
 var Router = require('./router');
 var Howls = require('./models/howls');
 var Me = require('./models/me');
-//var howler = require('duffdevice37');  // testing npm module publish
 
 window.app = {
 	init: function() {
 		var self = this;
-
-		//howler.play();  // but it's annoying.
 
 		this.me = new Me();
 
