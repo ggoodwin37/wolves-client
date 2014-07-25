@@ -8,10 +8,19 @@ module.exports = View.extend({
 		'submit [role=new-howl]': 'createNewHowl'
 	},
 	createNewHowl: function(event) {
+		var self = this;
 		event.preventDefault();
 		app.howls.create({
 			content: this.get('[name=content]').value,
 			createdAt: new Date()
+		}, {
+			//wait: true,  // could use this to be more defensive and wait until success before adding to collection.
+			success: function() {
+				self.get('[name=content]').value = '';
+			},
+			error: function() {
+				alert('Error');
+			}
 		});
 	}
 });
