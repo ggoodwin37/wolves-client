@@ -3,7 +3,9 @@ var moonboots = require('moonboots_hapi');
 var config = require('getconfig');
 var templatizer = require('templatizer');
 
-var server = hapi.createServer(8080, 'localhost');
+var serverHost = 'localhost',
+	serverPort = 8080;
+var server = hapi.createServer(serverPort, serverHost);
 server.pack.register({
 	plugin: moonboots,
 	options: {
@@ -24,5 +26,5 @@ server.pack.register({
 	}
 }, function() {
 	server.start();
-	console.log('wolves is running dude');
+	console.log('wolves is running at ' + serverHost + ':' + serverPort);
 });

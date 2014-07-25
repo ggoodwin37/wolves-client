@@ -1,3 +1,5 @@
 {
-	"isDev": true
+	"isDev": true,
+	"apiUrlBase": "http://wolves.technology",
+	"webSocketUrlBase": "ws://wolves.technology"
 }
