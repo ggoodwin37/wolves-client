@@ -5,7 +5,7 @@ module.exports = Model.extend({
 	ajaxConfig: function() {
 		return {
 			headers: {
-				'Auth-Token': app.me.accessToken
+				'Auth-Token': window.app.me.accessToken
 			}
 		};
 	},

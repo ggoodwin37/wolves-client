@@ -6,7 +6,7 @@ var View = require('ampersand-view'),
 module.exports = View.extend({
 	template: templates.pages.howls(),
 	initialize: function() {
-		this.collection = app.howls;
+		this.collection = window.app.howls;
 	},
 	subviews: {
 		newHowl: {

@@ -1,5 +1,5 @@
 var View = require('ampersand-view'),
-	ViewSwitcher = require('ampersand-view-switcher');
+	ViewSwitcher = require('ampersand-view-switcher'),
 	dom = require('ampersand-dom');
 var templates = require('../templates');
 
@@ -10,7 +10,7 @@ module.exports = View.extend({
 		'click a[href]': 'handleLinkClick'
 	},
 	initialize: function() {
-		this.listenTo(app.router, 'page', this.handlePage);
+		this.listenTo(window.app.router, 'page', this.handlePage);
 	},
 	render: function() {
 		this.renderWithTemplate();
@@ -36,7 +36,7 @@ module.exports = View.extend({
 		var hasModifiers = event.ctrlKey || event.metaKey || event.shiftKey;
 		if (isLocal && !hasModifiers) {
 			event.preventDefault();
-			app.router.history.navigate(aTag.pathname, {trigger: true});
+			window.app.router.history.navigate(aTag.pathname, {trigger: true});
 		}
 	}
 });

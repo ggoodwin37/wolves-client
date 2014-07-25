@@ -3,7 +3,7 @@ var MainView = require('./views/main');
 var Router = require('./router');
 var Howls = require('./models/howls');
 var Me = require('./models/me');
-var howler = require('duffdevice37');  // testing npm module publish
+//var howler = require('duffdevice37');  // testing npm module publish
 
 window.app = {
 	init: function() {

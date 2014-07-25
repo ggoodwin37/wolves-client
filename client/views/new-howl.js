@@ -10,7 +10,7 @@ module.exports = View.extend({
 	createNewHowl: function(event) {
 		var self = this;
 		event.preventDefault();
-		app.howls.create({
+		window.app.howls.create({
 			content: this.get('[name=content]').value,
 			createdAt: new Date()
 		}, {
@@ -19,7 +19,7 @@ module.exports = View.extend({
 				self.get('[name=content]').value = '';
 			},
 			error: function() {
-				alert('Error');
+				console.log('Error posting howl.');
 			}
 		});
 	}

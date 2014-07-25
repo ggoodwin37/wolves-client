@@ -25,12 +25,12 @@ module.exports = Router.extend({
 	authCallback: function() {
 		var hash = window.location.hash;
 		var params = querystring.parse(hash.substr(1));
-		var accessToken = params['access_token'];
+		var accessToken = params.access_token;
 		if (!accessToken) {
 			console.log('bad/missing access token');
 			return;
 		}
-		app.me.accessToken = accessToken;
+		window.app.me.accessToken = accessToken;
 		this.redirectTo('/howls');
 	}
 });

@@ -18,6 +18,6 @@ module.exports = Collection.extend({
 			if (data.channel == self.url && data.action == 'update') {
 				self.fetchById(data.id);  // super awesome magic collection built-in method
 			}
-		}
+		};
 	}
 });
