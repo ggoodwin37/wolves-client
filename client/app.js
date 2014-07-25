@@ -9,7 +9,6 @@ window.app = {
 		var self = this;
 
 		this.me = new Me();
-		this.me.fetch();
 
 		this.howls = new Howls();
 		this.howls.fetch();
@@ -24,6 +23,7 @@ window.app = {
 				el: document.body
 			});
 			self.router.history.start({pushState: true});
+			self.me.fetch();
 		});
 	}
 };
