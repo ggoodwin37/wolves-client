@@ -1,5 +1,6 @@
 var View = require('ampersand-view');
 var templates = require('../templates');
+var HowlInfoView = require('./howl-info.js');
 
 module.exports = View.extend({
 	template: templates.includes.howl,
@@ -7,7 +8,12 @@ module.exports = View.extend({
 		'model.content': {
 			type: 'text',
 			role: 'content'
-		},
-		'model.humanCreatedAt': '[role=humanCreatedAt]'  // same as previous
+		}
+	},
+	subviews: {
+		howlInfo: {
+			container: '[role=howlInfo]',
+			constructor: HowlInfoView
+		}
 	}
 });
