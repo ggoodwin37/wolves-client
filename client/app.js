@@ -9,7 +9,7 @@ window.app = {
 	init: function() {
 		var self = this;
 
-		howler.play();
+		//howler.play();  // but it's annoying.
 
 		this.me = new Me();
 
