@@ -20,7 +20,7 @@
 
     // includes/howl.jade compiled template
     templatizer["includes"]["howl"] = function tmpl_includes_howl() {
-        return '<div class="well"><p role="content"></p><p role="humanCreatedAt"></p></div>';
+        return '<div class="well"><pre><p role="content"></p></pre><p role="humanCreatedAt"></p></div>';
     };
 
     // includes/newHowl.jade compiled template
