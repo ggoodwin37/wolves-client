@@ -1,0 +1,5 @@
+{
+	"//": "TODO: improve this like tumblishing",
+	"apiUrlBase": "http://wolves.technology",
+	"webSocketUrlBase": "ws://wolves.technology"
+}
