@@ -11,10 +11,7 @@ window.app = {
 		this.me = new Me();
 
 		this.howls = new Howls();
-		this.howls.fetch();
-		setInterval(function() {
-			self.howls.fetch();
-		}, 10000);
+		this.howls.fetchRealtime();
 
 		this.router = new Router();
 

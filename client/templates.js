@@ -25,7 +25,7 @@
 
     // includes/newHowl.jade compiled template
     templatizer["includes"]["newHowl"] = function tmpl_includes_newHowl() {
-        return '<div><form role="new-howl"><textarea name="content" placeholder="Awwooo!"></textarea><button type="submit" class="btn">Send Howl</button></form></div>';
+        return '<div><form role="new-howl"><textarea name="content" placeholder="Awwooo!"></textarea><div><button type="submit" class="btn">Send Howl</button></div></form></div>';
     };
 
     // pages/home.jade compiled template
