@@ -3,7 +3,9 @@ var Howl = require('./howl');
 
 module.exports = Collection.extend({
 	model: Howl,
-	url: 'http://wolves.technology/howls',
+	url: function() {
+		return window.app.config.apiUrlBase + '/howls';
+	},
 	comparator: function(model) {
 		return -1 * model.createdAt.valueOf();
 	},
@@ -12,7 +14,7 @@ module.exports = Collection.extend({
 		this.fetch();
 
 		// note: would need to send auth header if this endpoint was secured.
-		var socket = new WebSocket('ws://wolves.technology');
+		var socket = new WebSocket(window.app.config.webSocketUrlBase);
 		socket.onmessage = function(event) {
 			var data = JSON.parse(event.data);
 			if (data.channel == self.url && data.action == 'update') {

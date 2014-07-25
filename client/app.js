@@ -7,8 +7,8 @@ var Howls = require('./models/howls');
 var Me = require('./models/me');
 
 window.app = {
+	config: config,
 	init: function() {
-		console.log(config);
 		var self = this;
 
 		this.me = new Me();

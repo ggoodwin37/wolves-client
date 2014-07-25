@@ -1,7 +1,9 @@
 var Model = require('ampersand-model');
 
 module.exports = Model.extend({
-	urlRoot: 'http://wolves.technology/wolves/me',
+	urlRoot: function() {
+		return window.app.config.apiUrlBase + '/wolves/me';
+	},
 	ajaxConfig: function() {
 		return {
 			headers: {

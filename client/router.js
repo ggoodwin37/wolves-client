@@ -20,7 +20,7 @@ module.exports = Router.extend({
 	},
 	login: function() {
 		var redirectUri = encodeURIComponent(window.location.origin + '/auth/callback');
-		window.location = 'http://wolves.technology/authorize?redirect_uri=' + redirectUri;
+		window.location = window.app.config.apiUrlBase + '/authorize?redirect_uri=' + redirectUri;
 	},
 	authCallback: function() {
 		var hash = window.location.hash;
