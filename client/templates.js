@@ -20,12 +20,12 @@
 
     // includes/howl.jade compiled template
     templatizer["includes"]["howl"] = function tmpl_includes_howl() {
-        return '<div class="well"><pre><p role="content"></p></pre><p role="howlInfo"></p></div>';
+        return '<div class="well"><pre><p role="content"></p></pre><p role="howlInfo"></p><span role="humanCreatedAt"></span></div>';
     };
 
     // includes/howlInfo.jade compiled template
     templatizer["includes"]["howlInfo"] = function tmpl_includes_howlInfo() {
-        return '<div><img role="avatar" src="http://robohash.com/foo?size=40x40"/><span role="userName">SomeUserName</span><span role="humanCreatedAt"></span></div>';
+        return '<span><img role="avatarUrl"/><span role="userName"></span></span>';
     };
 
     // includes/newHowl.jade compiled template

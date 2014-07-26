@@ -8,6 +8,10 @@ module.exports = View.extend({
 		'model.content': {
 			type: 'text',
 			role: 'content'
+		},
+		'model.humanCreatedAt': {
+			type: 'text',
+			role: 'humanCreatedAt'
 		}
 	},
 	subviews: {
