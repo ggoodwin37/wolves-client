@@ -12,7 +12,8 @@ server.pack.register({
 			main: __dirname + '/client/app.js',
 			developmentMode: config.isDev,
 			stylesheets: [
-				__dirname + '/public/css/bootstrap.css'
+				__dirname + '/public/css/bootstrap.css',
+				__dirname + '/public/css/main.css'
 			],
 			beforeBuildJS: function() {
 				if (config.isDev) {
