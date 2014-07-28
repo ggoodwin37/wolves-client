@@ -4,10 +4,10 @@ var templates = require('../templates');
 module.exports = View.extend({
 	template: templates.includes.howlUserInfo,
 	bindings: {
-		'model.username': '[role=userName]',
+		'model.username': '[role=username]',
 		'model.avatar': {
 			type: 'attribute',
-			role: 'avaturUrl',
+			role: 'avatarUrl',
 			name: 'src'
 		}
 	}
