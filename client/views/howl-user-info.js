@@ -2,8 +2,13 @@ var View = require('ampersand-view');
 var templates = require('../templates');
 
 module.exports = View.extend({
-	template: templates.includes.howlInfo,
+	template: templates.includes.howlUserInfo,
 	bindings: {
-		'model.humanCreatedAt': '[role=humanCreatedAt]'
+		'model.username': '[role=userName]',
+		'model.avatar': {
+			type: 'attribute',
+			role: 'avaturUrl',
+			name: 'src'
+		}
 	}
 });
