@@ -3,3 +3,5 @@ npm-debug.log
 
 // ignore the build template for now. this needs to be unignored before shipping though.
 client/templates.js
+
+todo.txt
